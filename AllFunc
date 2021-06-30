@@ -1,0 +1,66 @@
+//Палиндром
+function palindrome(a){
+var b = a.split('');
+var c = b.reverse();
+var n = c.join('');
+//var n = a.split('').reverse().join('');
+
+if (a==n) { alert(n+' - это палиндром');}
+else { alert(n+' - это не палиндром');}
+}
+
+palindrome('qwewq');
+
+//FizzBuzz
+function FizzBuzz(i, n){
+
+for(i; i <= n; i++){
+    if(i % 3 == 0 && i % 5 == 0) alert('fizzbuzz');
+  else if(i % 5 == 0) alert('buzz');
+  else if(i % 3 == 0) alert('fizz');
+  else alert(i);
+}
+}
+FizzBuzz(1, 9);
+
+//Анаграмма
+function isAnagram (str1, str2) {
+  str1 = str1.toLowerCase();
+  str2 = str2.toLowerCase();
+
+  if (str1.length !== str2.length) { alert('не анаграмма');}
+
+  var sortStr1 = str1.split('').sort().join('').trim();
+  var sortStr2 = str2.split('').sort().join('').trim();
+  
+    if(sortStr1 == sortStr2) { alert('анаграмма')}  
+  
+ }
+isAnagram('dog', 'goD');
+
+//Поиск гласных
+function vowelSearch(a) {
+a = a.toLowerCase();
+var count = 0;
+    
+for (var i = 0; i < a.length; i++) {
+    if (a[i] == 'а' || a[i] == 'е' || a[i] == 'у' || a[i] == 'и' || a[i] == 'ю'|| a[i] == 'о'|| a[i] == 'я' a[i] == 'ы' a[i] == 'э')
+  { count+= 1;}
+}
+return count;
+}
+alert(vowelSearch('Привет, меня зовут Ксюша'));
+
+//Фибоначчи
+function Fibonacci(n) {
+  var a = 1;
+  var b = 1;
+  for (var i = 3; i <= n; i++) {
+    var c = a + b;
+    a = b;
+    b = c;
+  }
+  return b;
+}
+alert(Fibonacci(3)); 
+
